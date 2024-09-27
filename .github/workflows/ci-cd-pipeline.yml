@@ -39,7 +39,7 @@ jobs:
         run: |
           docker push subham24/generator:latest
 
-      # Build the reader Docker image
+      # Build the reader Docker imag
       - name: Build Reader Image
         run: |
           cd reader
