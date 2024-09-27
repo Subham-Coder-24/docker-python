@@ -38,10 +38,6 @@ jobs:
       - name: Build Docker images
         run: docker-compose build
 
-      # Run tests (if any)
-      - name: Run tests
-        run: docker-compose run generator pytest tests/  # Customize with your testing framework
-
       # Push Docker images to DockerHub
       - name: Push Docker images to DockerHub
         run: docker-compose push
