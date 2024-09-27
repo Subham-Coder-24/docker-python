@@ -1,3 +1,25 @@
+# version: '3'
+# services:
+#   generator:
+#     build: ./generator
+#     container_name: generator
+#     volumes:
+#       - subham:/app/shared_files/
+#     command: python3 generator.py
+#     stdin_open: true
+#     tty: true
+
+#   reader:
+#     build: ./reader
+#     container_name: reader
+#     volumes:
+#       - subham:/app/data/
+#     command: python3 reader.py
+#     stdin_open: true
+#     tty: true
+
+# volumes:
+#   subham:
 version: '3'
 services:
   generator:
