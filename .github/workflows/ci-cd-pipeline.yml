@@ -32,20 +32,20 @@ jobs:
       - name: Build Generator Image
         run: |
           cd generator
-          docker build -t yourusername/generator:latest .
+          docker build -t subham24/generator:latest .
 
       # Push the generator Docker image to DockerHub
       - name: Push Generator Image to DockerHub
         run: |
-          docker push yourusername/generator:latest
+          docker push subham24/generator:latest
 
       # Build the reader Docker image
       - name: Build Reader Image
         run: |
           cd reader
-          docker build -t yourusername/reader:latest .
+          docker build -t subham24/reader:latest .
 
       # Push the reader Docker image to DockerHub
       - name: Push Reader Image to DockerHub
         run: |
-          docker push yourusername/reader:latest
+          docker push subham24/reader:latest
