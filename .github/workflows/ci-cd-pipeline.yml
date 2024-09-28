@@ -28,24 +28,16 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # Build the generator Docker image
-      - name: Build Generator Image 
+      # Install Docker Compose
+      - name: Install Docker Compose
         run: |
-          cd generator
-          docker build -t subham24/generator:latest .
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
 
-      # Push the generator Docker image to DockerHub
-      - name: Push Generator Image to DockerHub
-        run: |
-          docker push subham24/generator:latest
+      # Build Docker images for the generator and reader services
+      - name: Build Docker images
+        run: docker-compose build
 
-      # Build the reader Docker imag
-      - name: Build Reader Image
-        run: |
-          cd reader
-          docker build -t subham24/reader:latest .
-
-      # Push the reader Docker image to DockerHub
-      - name: Push Reader Image to DockerHub
-        run: |
-          docker push subham24/reader:latest
+      # Push Docker images to DockerHub
+      - name: Push Docker images to DockerHub
+        run: docker-compose push
