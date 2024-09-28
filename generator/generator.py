@@ -4,7 +4,7 @@ import time
 from datetime import datetime
 
 output_dir = "/app/shared_files/"
-
+#  b
 def generate_random_text():
     text = ''.join(random.choices('abcdefghijklmnopqrstuvwxyz ', k=50))
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
